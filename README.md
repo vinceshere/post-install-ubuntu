@@ -1,15 +1,49 @@
 # Ubuntu post-install script
-Script made to be running in fresh Ubuntu installs (tested on 20.04).
+Script made to be running in fresh Ubuntu installs (tested on 19.10).
 
-This script installs:
-- [Google Chrome](https://www.google.com/chrome/);
-- [Docker with docker-compose](https://www.docker.com/);
+## Packages list:
+
+### Dev Tools
 - [NVM](https://github.com/nvm-sh/nvm);
+- [Docker with docker-compose](https://www.docker.com/);
+- [Toggl](https://toggl.com/);
+- [Insomnia](https://insomnia.rest/);
+- [VSCode](https://code.visualstudio.com/);
+
+### Productivity
+- [Google Chrome](https://www.google.com/chrome/);
+- [Discord](https://discord.com/);
+- [Joplin](https://joplinapp.org/);
 - [Slack](https://slack.com/);
 - [Spotify](https://www.spotify.com/);
-- [VSCode](https://code.visualstudio.com/);
-- [Insomnia](https://insomnia.rest/);
 - [Terminator](https://terminator-gtk3.readthedocs.io/en/latest/), [ZSH](http://www.zsh.org/) and [Antigen](https://github.com/zsh-users/antigen).
+
+### Ubuntu packages
+- curl
+- wget
+- curl
+- git
+- zsh
+- vim
+- terminator
+- make
+- audacity
+- inkscape
+- blender
+- gimp
+- ubuntu-restricted-extras
+- software-properties-common
+- apt-transport-https wget
+- ca-certificates
+- gnupg-agent
+- make
+- autojump
+- ruby
+- cowsay
+- fortune
+- figlet
+- lolcat
+- chrome-gnome-shell
 
 ## Running
 First of all, clone this repository.
@@ -42,4 +76,5 @@ Will be installed with the following extensions:
 
 ## Terminal
 Will be installed using ZSH as shell and Antigen for plugins management (using OhMyZsh).
-Terminator was my choice as default terminal.
+Terminator was my choice as default terminal since it allows panel splitting.
+Also, it adds a populated `.zshrc` with a helper for `NVM`, which allows automatically Node.js version switch on folder navigation.

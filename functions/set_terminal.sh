@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin bash
 
 echo ''
 echo '#------------------------------------------------------------------------------#'
@@ -23,6 +23,11 @@ echo ""
 echo "- Copying .zshrc to home folder:"
 rm -rf ~/.zshrc
 cp -f $PWD/dotfiles/.zshrc ~/.zshrc
+echo ""
+
+echo "- Copying .aliases to home folder:"
+rm -rf ~/.aliases
+cp -f $PWD/dotfiles/.aliases ~/.aliases
 echo ""
 
 echo "- Copying .antigenrc to home folder:"

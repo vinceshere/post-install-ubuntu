@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin bash
 
 echo ''
 echo '#------------------------------------------------------------------------------#'
@@ -6,7 +6,8 @@ echo '                                Setup complete!                           
 echo '#------------------------------------------------------------------------------#'
 echo ''
 
-sudo rm -rf $PWD/temp
+rm -rf $PWD/temp
+rm -rf "-r"
 
 echo "Setup completed successfully!"
 echo 'Please, reboot your computer in order to make changes available.'

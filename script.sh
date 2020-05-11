@@ -21,6 +21,9 @@ sh $PWD/functions/install_docker.sh
 sh $PWD/functions/install_nvm.sh
 sh $PWD/functions/install_chrome.sh
 sh $PWD/functions/install_insomnia.sh
+sh $PWD/functions/install_joplin.sh
+sh $PWD/functions/install_discord.sh
+sh $PWD/functions/install_toggl.sh
 sh $PWD/functions/finish.sh
 
 #END OF SCRIPT

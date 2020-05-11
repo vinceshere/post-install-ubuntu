@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin bash
 
 echo ''
 echo '#------------------------------------------------------------------------------#'
@@ -8,17 +8,13 @@ echo ''
 
 if [ $(which insomnia | grep -c "insomnia") -eq 0 ]
 then
-    echo "- Adding PPA:"
-    echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
-    | sudo tee -a /etc/apt/sources.list.d/insomnia.list
+    echo "- Downloading:"
+    dest=$PWD/temp
+    mkdir $dest
+    wget -O $dest/insomnia.deb 'https://updates.insomnia.rest/downloads/ubuntu/latest?&app=com.insomnia.app&source=website'
     echo ''
-    echo "- Adding key to PPA:"
-    wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
-    | sudo apt-key add -
     echo "- Installing:"
-    sudo apt-get update
-    sudo apt-get install insomnia
-
+    sudo dpkg -i $dest/insomnia.deb
     echo "- Finished installing Insomnia!"
 else
     echo "Insomnia already exists"
