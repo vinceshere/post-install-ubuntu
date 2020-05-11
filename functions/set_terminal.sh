@@ -13,7 +13,7 @@ sudo usermod --shell $(which zsh) $USER
 echo ""
 
 echo "- Setting Tilix as the default terminal:"
-gsettings set org.gnome.desktop.default-applications.terminal exec 'tilix'
+gsettings set org.gnome.desktop.default-applications.terminal exec 'terminator'
 echo ""
 
 echo "Installing Antigen:"

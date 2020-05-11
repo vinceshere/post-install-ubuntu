@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin bash
 
 echo ''
 echo '#------------------------------------------------------------------------------#'
@@ -8,20 +8,9 @@ echo ''
 
 if [ $(sudo cat /etc/apt/sources.list /etc/apt/sources.list.d/* | grep -c "docker") -eq 0 ]
 then
-    echo "Adding Docker PPA key:"
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    echo "Installing Docker:"
+    sudo apt-get install -y docker.io
     echo ''
-
-    echo "Adding PPA:"
-    sudo add-apt-repository \
-        "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-        $(lsb_release -cs) \
-        stable"
-    echo ''
-
-    echo "Installing:"
-    sudo apt-get update
-    sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
     echo "Adding user to docker group:"
     sudo usermod -aG docker $USER

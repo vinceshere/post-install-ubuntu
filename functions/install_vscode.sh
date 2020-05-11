@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin bash
 
 echo ''
 echo '#------------------------------------------------------------------------------#'
@@ -6,7 +6,7 @@ echo '                           Starting VSCode install                        
 echo '#------------------------------------------------------------------------------#'
 echo ''
 
-if [ $(sudo cat /etc/apt/sources.list /etc/apt/sources.list.d/* | grep -c "vscode") -eq 0 ]
+if [ $(which code | grep -c "code") -eq 0 ]
 then
     echo "- Adding VSCode key for Microsoft's PPA:"
     wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
@@ -26,6 +26,9 @@ then
     code --install-extension dbaeumer.vscode-eslint
     code --install-extension eamodio.gitlens
     code --install-extension prettier.prettier-vscode
+    code --install-extension ms-vscode.vscode-typescript-tslint-plugin
+    code --install-extension mauve.terraform
+    code --install-extension tyriar.sort-lines
 
     echo "- Finished installing VSCode!"
     echo ''
