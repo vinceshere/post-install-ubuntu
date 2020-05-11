@@ -10,6 +10,7 @@ This script installs:
 - [VSCode](https://code.visualstudio.com/);
 - [Insomnia](https://insomnia.rest/);
 - [Terminator](https://terminator-gtk3.readthedocs.io/en/latest/), [ZSH](http://www.zsh.org/) and [Antigen](https://github.com/zsh-users/antigen).
+- [OpenVPN Client](https://openvpn.net/)
 
 ## Running
 First of all, clone this repository.
@@ -43,3 +44,23 @@ Will be installed with the following extensions:
 ## Terminal
 Will be installed using ZSH as shell and Antigen for plugins management (using OhMyZsh).
 Terminator was my choice as default terminal.
+
+## Aliases
+Added a file with Docker aliases (and some fun ones :P).
+To see all docker aliases (after install and reboot), type on terminal:
+
+```
+$ dcalias
+```
+
+To see a very funny git latest log, type:
+
+```
+$ glc
+```
+
+And finally, to see a daily fortune message:
+
+```
+$ myluck
+```

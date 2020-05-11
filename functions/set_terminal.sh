@@ -29,3 +29,8 @@ echo "- Copying .antigenrc to home folder:"
 rm -rf ~/.antigenrc
 cp -f $PWD/dotfiles/.antigenrc ~/.antigenrc
 echo ""
+
+echo "- Copying .aliases to home folder:"
+rm -rf ~/.aliases
+cp -f $PWD/dotfiles/.aliases ~/.aliases
+echo ""
